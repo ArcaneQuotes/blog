@@ -1,5 +1,48 @@
 baseURL = 'https://blog.arcanequotes.com/'
 languageCode = 'en-us'
 title = 'ArcaneQuotes'
+subtitle = "Something"
 
 theme = 'mainroad'
+
+[Author] # Used in authorbox
+  name = "Marius Kimmina"
+  bio = "Infrastructure, security and automation"
+  avatar = "img/avatar.png"
+
+[Params]
+  description = "An overengineered site" # Site description. Used in meta description
+  copyright = "Marius Kimmina" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = true # Enable Twitter Cards if true
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+  toc = true # Enable Table of Contents
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+
+[[menu.main]]
+identifier = "Blog"
+name = "Blog"
+url = "/Blog/"
+weight = 10
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 30
+
+
+[params.sidebar]
+home = "right"
+list = "left"
+single = "false"
+widgets = [ "search", "recent", "categories" ]
